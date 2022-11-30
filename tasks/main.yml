@@ -1,0 +1,10 @@
+---
+- name: mysql 8.0 installed
+  ansible.builtin.apt:
+    name: mysql-server=8.0*
+    state: present
+- name: mysql service enabled
+  ansible.builtin.service:
+    name: mysql
+    state: started
+    enabled: yes
